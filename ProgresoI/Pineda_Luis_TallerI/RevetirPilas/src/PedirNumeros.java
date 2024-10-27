@@ -36,6 +36,13 @@ public class PedirNumeros {
             }
         }
 
+        //En este caso, si la string no termina con un espacio extra no apilara el ultimo numer
+        if (!auxiliar.isEmpty()){
+            int num = Integer.parseInt(auxiliar);
+            pila.apilar(num, textArea);
+
+        }
+
     }
 
 

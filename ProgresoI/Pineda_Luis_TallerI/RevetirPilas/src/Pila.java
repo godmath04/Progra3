@@ -24,6 +24,27 @@ public class Pila {
         actualizarTextArea(textArea);
     }
 
+    //Metodo para invertir pila
+    public void invertirPila(JTextArea textArea){
+        Pila pilaAuxiliar = new Pila();
+        Nodo actual = cima;
+
+        while (actual != null){
+            pilaAuxiliar.apilar(actual.dato, null);
+            actual=actual.siguiente;
+        }
+
+        // Crear el string de la pila invertida
+        StringBuilder pilaStrInvertida = new StringBuilder();
+        while (!pilaAuxiliar.estaVacia()) {
+            pilaStrInvertida.append(pilaAuxiliar.desapilar(null)).append("\n");  // Desapilar de la auxiliar para invertir el orden
+        }
+        // Mostrar la pila invertida en el nuevo JTextArea
+        textArea.setText(pilaStrInvertida.toString());
+
+
+    }
+
 
     // Metodo para desapilar
     public int desapilar(JTextArea textArea){
