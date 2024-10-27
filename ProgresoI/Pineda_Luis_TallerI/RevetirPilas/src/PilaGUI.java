@@ -4,7 +4,6 @@ import java.awt.event.ActionListener;
 
 public class PilaGUI {
     private JTextArea txtResultado;
-    private JTextField txtElemento;
     private JButton invertirSecuenciaButton;
     private JButton desapilarButton;
     private JPanel pGeneral;

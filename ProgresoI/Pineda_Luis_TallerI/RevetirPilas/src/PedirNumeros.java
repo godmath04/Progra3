@@ -1,14 +1,11 @@
 import javax.swing.*;
-
 public class PedirNumeros {
     public int numeros;
 
     public PedirNumeros(int numeros) {
         this.numeros = numeros;
     }
-
     //Metodo para pedir numeros
-
     public void pedirNumero(Pila pila, JTextArea textArea){
         String ingresoNumeros = JOptionPane.showInputDialog("Ingrese los numeros en secuencia separados con un espacio");
         String auxiliar="";
@@ -31,8 +28,6 @@ public class PedirNumeros {
                     //Vaciamos el auxiliar
                     auxiliar = "";
                 }
-
-
             }
         }
 
