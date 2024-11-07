@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Ej2FilaBanco/Ej2FilaBanco.iml" filepath="$PROJECT_DIR$/Ej2FilaBanco/Ej2FilaBanco.iml" />
       <module fileurl="file://$PROJECT_DIR$/Ej3PrioridadesEmergencia/Ej3PrioridadesEmergencia.iml" filepath="$PROJECT_DIR$/Ej3PrioridadesEmergencia/Ej3PrioridadesEmergencia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ejercicio4_PilaBalanceada/Ejercicio4_PilaBalanceada.iml" filepath="$PROJECT_DIR$/Ejercicio4_PilaBalanceada/Ejercicio4_PilaBalanceada.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ejercicio5/Ejercicio5.iml" filepath="$PROJECT_DIR$/Ejercicio5/Ejercicio5.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Pineda_Luis_TallerI.iml" filepath="$PROJECT_DIR$/.idea/Pineda_Luis_TallerI.iml" />
       <module fileurl="file://$PROJECT_DIR$/RevetirPilas/RevertirPilas.iml" filepath="$PROJECT_DIR$/RevetirPilas/RevertirPilas.iml" />
     </modules>

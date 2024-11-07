@@ -16,9 +16,12 @@ public class ColaGUI {
         atendidoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String mensaje = c.desencolar(txtAtendidos);
-                txtAtendidos.setText(mensaje);
-                            }
+                try {
+                    String mensaje = c.desencolar(txtAtendidos);
+                    txtAtendidos.setText(mensaje);
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(null, "Error al atender al cliente: " + ex.getMessage());
+                }}
         });
         encolarButton.addActionListener(new ActionListener() {
             @Override

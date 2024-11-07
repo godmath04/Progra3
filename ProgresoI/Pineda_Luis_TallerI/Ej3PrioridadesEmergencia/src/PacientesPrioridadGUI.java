@@ -19,9 +19,12 @@ public class PacientesPrioridadGUI {
         salidaDePacienteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String msj = c.desencolar(txtSalida);
-                //Mostrar en la salida
-                txtSalida.setText(msj);
+                try {
+                    String msj = c.desencolar(txtSalida);
+                    txtSalida.setText(msj);
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(null, "Error al dar salida al paciente: " + ex.getMessage());
+                }
             }
         });
         ingresoDePacienteButton.addActionListener(new ActionListener() {

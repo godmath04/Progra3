@@ -9,6 +9,12 @@ public class PedirNumeros {
     public void pedirNumero(Pila pila, JTextArea textArea){
         String ingresoNumeros = JOptionPane.showInputDialog("Ingrese los numeros en secuencia separados con un espacio");
         String auxiliar="";
+        //Manejo de error. Verificar si el usuario deja en blanco o se presiona cancelar
+        if (ingresoNumeros == null || ingresoNumeros.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Entrada vacía. Por favor, ingrese al menos un número.");
+            return;
+        }
+
 
         //Vamos a exminar la cadena ingresada
         for (int i = 0; i < ingresoNumeros.length(); i++){
@@ -22,10 +28,13 @@ public class PedirNumeros {
             }else{
                 // Entonces el numero auxiliar lo apilamos
                 if (!auxiliar.isEmpty()) {
-                    int num = Integer.parseInt(auxiliar);
-                    pila.apilar(num, textArea);
-
-                    //Vaciamos el auxiliar
+                    try {
+                        int num = Integer.parseInt(auxiliar);
+                        pila.apilar(num, textArea);
+                    } catch (NumberFormatException e) {
+                        JOptionPane.showMessageDialog(null, "Error: '" + auxiliar + "' no es un número válido.");
+                    }
+                    // Vaciamos el auxiliar
                     auxiliar = "";
                 }
             }
@@ -33,8 +42,12 @@ public class PedirNumeros {
 
         //En este caso, si la string no termina con un espacio extra no apilara el ultimo numer
         if (!auxiliar.isEmpty()){
-            int num = Integer.parseInt(auxiliar);
-            pila.apilar(num, textArea);
+            try {
+                int num = Integer.parseInt(auxiliar);
+                pila.apilar(num, textArea);
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Error: '" + auxiliar + "' no es un número válido.");
+            }
 
         }
 

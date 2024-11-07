@@ -15,21 +15,33 @@ public class PilaGUI {
         desapilarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                pila.desapilar(txtResultado);
+                try {
+                    pila.desapilar(txtResultado);
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(null, "Error al desapilar: " + ex.getMessage());
+                }
             }
         });
         ingresarSecuenciaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                PedirNumeros solicitar = new PedirNumeros(0);
-                solicitar.pedirNumero(pila, txtResultado);
+                try {
+                    PedirNumeros solicitar = new PedirNumeros(0);
+                    solicitar.pedirNumero(pila, txtResultado);
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(null, "Error al ingresar la secuencia: " + ex.getMessage());
+                }
 
             }
         });
         invertirSecuenciaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                pila.invertirPila(txtInvertido);
+                try {
+                    pila.invertirPila(txtInvertido);
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(null, "Error al invertir la pila: " + ex.getMessage());
+                }
             }
         });
     }
